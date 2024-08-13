@@ -3,6 +3,7 @@ import { FaHome, FaRegClock, FaRegThumbsUp, FaHistory, FaVideo, FaBars } from 'r
 import { MdSubscriptions } from 'react-icons/md';
 import { AiFillYoutube } from 'react-icons/ai';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
 
@@ -13,10 +14,10 @@ const Sidebar = () => {
 
   return (
     <div className='shadow-lg mx-4 text-black '>
-      <ul className='space-y-2'>
+      <ul className='space-y-2 cursor-pointer'>
         <li className='flex items-center'>
           <FaHome className='mr-2' />
-          Home
+         <Link to="/"> Home</Link>
         </li>
         <li className='flex items-center'>
           <FaVideo className='mr-2' />
