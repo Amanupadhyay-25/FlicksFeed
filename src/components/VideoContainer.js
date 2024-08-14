@@ -1,37 +1,39 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { YOUTUBE_VIDEO_API } from '../utils/constant';
-import { VideoCard } from './VideoCard';
+import { AdVideoCard, VideoCard } from './VideoCard';
 import { Link } from 'react-router-dom';
 
 const VideoContainer = () => {
+  // Step-2: Update the state with fetched videos
+  const [videos, setVideos] = useState([]);
 
-  //Step-2: update the state from khali container to bhardo
-  const [videos,setVideos]=useState([]);
+  // Fetch videos from YouTube API when the component mounts
+  useEffect(() => {
+    getVideos();
+  }, []);
 
-//Ye jb render hoga tabhi api call hoga ..phle baar render jarne pe hi api call kardo
-useEffect(()=>{
-   getVideos();
-},[]);
-
-//Step-1: Make API call from youtube
-const getVideos=async()=>{
-  const data=await fetch(YOUTUBE_VIDEO_API);
-  const json=await data.json();
-  // console.log(json.items);
-  setVideos(json.items);
-}
+  // Step-1: Make an API call to YouTube to get videos
+  const getVideos = async () => {
+    const data = await fetch(YOUTUBE_VIDEO_API);
+    const json = await data.json();
+    setVideos(json.items);
+  };
 
   return (
-    // Step-3: here first me make call for one then we iterate it
+    // Step-3: Render the first video as an ad and then iterate through the rest
     <div className='flex flex-wrap'>
-    {videos.length>0 &&
-      videos.map((video)=>(
-       <Link to={"watch?v=" + video.id}>
-      < VideoCard info={video} />
-      </Link>
-    ))}
-    </div>
-  )
-}
+      {/* Render the first video as an AdVideoCard if videos are available */}
+      {videos.length > 0 && <AdVideoCard info={videos[0]} />}
 
-export default VideoContainer
+      {/* Render the rest of the videos */}
+      {videos.length > 0 &&
+        videos.slice(1).map((video) => (
+          <Link to={"watch?v=" + video.id} key={video.id}>
+            <VideoCard info={video} />
+          </Link>
+        ))}
+    </div>
+  );
+};
+
+export default VideoContainer;

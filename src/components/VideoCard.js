@@ -3,7 +3,7 @@ import React from 'react'
 
 //Step-4 : 
 export const VideoCard = ({info}) => {
-    console.log(info);
+    // console.log(info);
     const {snippet,statistics}=info;
     const {thumbnails,channelTitle,title}=snippet;
   return (
@@ -17,6 +17,14 @@ export const VideoCard = ({info}) => {
             <li>{channelTitle}</li>
             <li>{statistics.viewCount} views</li>
         </ul>
+    </div>
+  )
+};
+
+export const AdVideoCard=({info})=>{
+  return(
+    <div className='p-1 m-1 border border-red-700 cursor-progress'>
+      <VideoCard info={info}/>
     </div>
   )
 }
