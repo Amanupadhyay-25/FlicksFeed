@@ -74,7 +74,7 @@ return (
         </button>
       </div>
       {showSuggestions && (
-        <div className="fixed bg-white py-2 px-2 w-[37rem] shadow-lg rounded-lg border border-gray-100">
+        <div className="fixed absolute bg-white py-2 px-2 w-[35rem] shadow-lg rounded-lg border border-gray-100">
           <ul>
             {suggestions.map((s) => (
               <li key={s} className="py-2 px-3 shadow-sm hover:bg-gray-100">
