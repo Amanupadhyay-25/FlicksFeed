@@ -37,7 +37,7 @@ const Head = () => {
   };
 
   return (
-    <div className="grid grid-flow-col p-5 m-2 shadow-lg">
+    <div className="grid grid-flow-col p-5 m-2 shadow-lg bg-red-400">
       <div className="flex col-span-1">
         <img
           onClick={toggleMenuHandler}

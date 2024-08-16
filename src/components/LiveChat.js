@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import ChatMessage from './ChatMessage'
 import { useDispatch, useSelector } from 'react-redux';
 import { addMessages } from '../utils/chatSlice';
@@ -7,6 +7,8 @@ import { generateRandomName, makeRandomMessage } from '../utils/helper';
 const LiveChat = () => {
     // Initialize the dispatch function to send actions to the Redux store
     const dispatch = useDispatch();
+    //This is for sending message from user during live chat
+    const [LiveMessage,setLiveMessage]=useState("");
 
     // Extract the current chat messages from the Redux store
     const showMessages = useSelector(store => store.chat.messages);
@@ -27,6 +29,7 @@ const LiveChat = () => {
 
     // JSX for rendering the chat messages
     return (
+        <div>
         <div className="w-full h-[600px] ml-2 p-2 border border-black bg-slate-100 rounded-lg overflow-y-scroll flex flex-col-reverse">
             {
                 // Map over the messages array and render each message as a ChatMessage component
@@ -38,6 +41,28 @@ const LiveChat = () => {
                     />
                 ))
             }
+        </div>
+        <div className=''>
+            <form className='border border-black p-2' 
+            onSubmit={(e)=>{
+                e.preventDefault()
+                dispatch(addMessages({
+                name:"Aman",
+                message:LiveMessage,
+            }))
+            setLiveMessage("");
+          }}
+
+            >
+            <input type='text' 
+                className='px-8'
+                value={LiveMessage}
+                onChange={(e)=>setLiveMessage(e.target.value)}
+                placeholder='Chat as a Subscriber'/>
+                <button 
+                className='ml-5 border border-black shadow-lg px-4 bg-green-700'>Send</button>
+            </form>
+        </div>
         </div>
     )
 }
