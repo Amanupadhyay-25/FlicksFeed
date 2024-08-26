@@ -13,8 +13,8 @@ const Sidebar = () => {
   if(!isMenuOpen) return null ;
 
   return (
-    <div className='shadow-lg mx-4 text-black '>
-      <ul className='space-y-2 cursor-pointer'>
+    <div className='shadow-lg mx-4 px-6 text-black bg-pink-200 '>
+      <ul className='space-y-4 cursor-pointer'>
         <li className='flex items-center'>
           <FaHome className='mr-2' />
          <Link to="/"> Home</Link>
@@ -32,7 +32,7 @@ const Sidebar = () => {
       <hr className='my-4 border-gray-300' />
 
       <h1 className='font-bold text-xl py-2'>You</h1>
-      <ul className='space-y-2'>
+      <ul className='space-y-6'>
         <li className='flex items-center'>
           <AiFillYoutube className='mr-2' />
           Your channel
@@ -55,10 +55,10 @@ const Sidebar = () => {
         </li>
       </ul>
 
-      <hr className='my-4 border-gray-300' />
+      <hr className='my-6 border-gray-300' />
 
       <h1 className='font-bold text-xl py-2'>Subscription</h1>
-      <ul className='space-y-2'>
+      <ul className='space-y-6'>
         <li className='flex items-center'>
           <MdSubscriptions className='mr-2' />
           edureka!
@@ -79,12 +79,76 @@ const Sidebar = () => {
           <MdSubscriptions className='mr-2' />
           Kritika Yadav
         </li>
+        <li className='flex items-center'>
+          <MdSubscriptions className='mr-2' />
+          UR-Cristiano
+        </li>
+        <li className='flex items-center'>
+          <MdSubscriptions className='mr-2' />
+          Dhruv Rathee
+        </li>
+        <li className='flex items-center'>
+          <MdSubscriptions className='mr-2' />
+         Aman Upadhyay
+        </li>
+        <li className='flex items-center'>
+          <MdSubscriptions className='mr-2' />
+          Aaj Tak
+        </li>
+        <li className='flex items-center'>
+          <MdSubscriptions className='mr-2' />
+          Narendra Modi
+        </li>
+        <li className='flex items-center'>
+          <MdSubscriptions className='mr-2' />
+          Mohammad Shami
+        </li>
+        <li className='flex items-center'>
+          <MdSubscriptions className='mr-2' />
+         Star Sports
+        </li>
+        <li className='flex items-center'>
+          <MdSubscriptions className='mr-2' />
+          Movies OK 
+        </li>
+        <li className='flex items-center'>
+          <MdSubscriptions className='mr-2' />
+         The Divine Tales
+        </li>
+        <li className='flex items-center'>
+          <MdSubscriptions className='mr-2' />
+          Pujya Rajan Jee
+        </li>
+        <li className='flex items-center'>
+          <MdSubscriptions className='mr-2' />
+         Sony LIV
+        </li>
+        <li className='flex items-center'>
+          <MdSubscriptions className='mr-2' />
+          visa2explore
+        </li>
+        <li className='flex items-center'>
+          <MdSubscriptions className='mr-2' />
+         LatinHype
+        </li>
+        <li className='flex items-center'>
+          <MdSubscriptions className='mr-2' />
+          Crazy XYZ
+        </li>
+        <li className='flex items-center'>
+          <MdSubscriptions className='mr-2' />
+         CodeWithHarry
+        </li>
+        <li className='flex items-center'>
+          <MdSubscriptions className='mr-2' />
+          Bhajan Marg
+        </li>
       </ul>
 
       <hr className='my-4 border-gray-300' />
 
       <h1 className='font-bold text-xl py-2'>Explore</h1>
-      <ul className='space-y-2'>
+      <ul className='space-y-6'>
         <li className='flex items-center'>
           <FaBars className='mr-2' />
           Trending
@@ -128,6 +192,42 @@ const Sidebar = () => {
         <li className='flex items-center'>
           <FaBars className='mr-2' />
           Podcasts
+        </li>
+        <li className='flex items-center'>
+          <FaBars className='mr-2' />
+         Ronaldo
+        </li>
+        <li className='flex items-center'>
+          <FaBars className='mr-2' />
+          Kolkata News
+        </li>
+        <li className='flex items-center'>
+          <FaBars className='mr-2' />
+          Viral Memes
+        </li>
+        <li className='flex items-center'>
+          <FaBars className='mr-2' />
+         Bhakti Song
+        </li>
+        <li className='flex items-center'>
+          <FaBars className='mr-2' />
+         Old Movie Song
+        </li>
+        <li className='flex items-center'>
+          <FaBars className='mr-2' />
+        Post
+        </li>
+        <li className='flex items-center'>
+          <FaBars className='mr-2' />
+         Tweet
+        </li>
+        <li className='flex items-center'>
+          <FaBars className='mr-2' />
+          Current Affairs
+        </li>
+        <li className='flex items-center'>
+          <FaBars className='mr-2' />
+         Janmashtami 
         </li>
       </ul>
     </div>

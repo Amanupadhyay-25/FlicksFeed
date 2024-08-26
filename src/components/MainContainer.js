@@ -1,11 +1,10 @@
 import React from 'react'
-import Sidebar from './Sidebar'
 import ButtonList from './ButtonList'
 import VideoContainer from './VideoContainer'
 
 const MainContainer = () => {
   return (
-    <div className=''>
+    <div className='bg-blue-500 min-h-screen' >
        <ButtonList/> 
        <VideoContainer/>
     </div>

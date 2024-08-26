@@ -53,7 +53,7 @@ const Head = () => {
           />
         </a>
       </div>
-      <div className="col-span-10 px-10">
+      <div className="col-span-10 px-10 ">
         <div>
           <input
             className="px-5 w-1/2 border border-gray-400 p-2 rounded-l-full"
